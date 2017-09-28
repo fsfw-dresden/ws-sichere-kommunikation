@@ -1,0 +1,553 @@
+\documentclass{beamer}
+% \includeonlyframes{uj}
+\synctex=1
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{csquotes}
+\usepackage{eurosym}
+\usepackage{wasysym}
+\MakeAutoQuote{„}{”}
+
+
+% \usepackage{lmodern}
+% \usepackage{anyfontsize}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=[rgb]{1, 1, 1}, %
+  urlcolor=[rgb]{.2, .2, .5} %
+  % allcolors=[rgb]{0, 0, 0} % schwarz
+}
+
+\usetheme{Dresden}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\title{Verschlüsselte Kommunikation: Warum und wie.}
+\subtitle{Festival:progressive 2017}
+
+\addtobeamertemplate{frametitle}{}{%
+  \begin{textblock*}{130mm}(.963\textwidth,8.4mm)
+    \includegraphics[width=2.25cm]{img-src/fsfw-logo.pdf}
+  \end{textblock*}
+}
+
+\begin{document}
+
+\begin{frame}
+  \begin{center}%
+    \includegraphics[width=3cm]{img-src/fsfw-logo-with-text.pdf}\\
+
+    \vspace*{-0.5\baselineskip}
+
+    \parbox{.95\columnwidth}{\centering\Large\inserttitle}
+
+    \vspace*{\baselineskip}
+
+    \structure{\large \insertsubtitle}
+  \end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[label=wb]
+
+\begin{center}
+ \vspace{10mm}
+\structure{\Huge  <Eigenwerbung>}
+\end{center}
+ 
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ct1]
+  \frametitle{Wer sind wir?}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item Hochschulgruppe an der TU (gegründet 2014, ca. 10 P.)
+  \item Studierende (TU, HTW) und andere Leute
+  \item Hochschulen als Zielgruppe (Multiplikationswirkung)\\
+    und Arbeitsfeld (Räume, Strukturen)
+
+    \bigskip\onslide<+->
+
+  \item Bisherige Projekte
+    \begin{itemize}
+    \item Linux-Install-Party, Linux-Presentation-Day
+    \item Verschlüsselungsgewinnspiel
+    \item Monatliche Sprechstunde zu \LaTeX{} u.a.
+    \item Formulierung eines Programmpapiers
+    \item „Uni-Stick”:~80 $\times$ 8\,GB mit freier Software
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ct2]
+  \frametitle{Warum machen wir das? Aus Überzeugung!}
+
+  \onslide<+->
+
+  \begin{itemize}
+  \item \emph{Überzeugung 1}: freie und quelloffene Software ist (oft) besser\\
+    (technische + nicht technische Argumente)\\
+    \bigskip\onslide<+->
+  \item \emph{Überzeugung 2}: öffentlich finanzierte wissenschaftliche Inhalte
+    (AutorInnen, GutachterInnen) sollten nicht von öffentlich finanzierten
+    Bibliotheken für horrende Summen von Zeitschriften-Verlagen gekauft werden
+    müssen
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ct1b,t]
+  \frametitle{Projekt Uni-Stick}
+
+  \begin{itemize}
+  \item \textbf{4000} Flyer in Ersti-Tüten: \textbf{Gutscheine} für 8\,GB Stick mit freier Software
+    fürs Studium, 550 \geneuro{} vom TU-StuRa für 80 Stk.
+  \item Live-Linux / freie Windows-Programme
+    \pause
+  \item Hat viel Arbeit gemacht
+    \pause
+  \item Ist gut angekommen (ca. 250 TN)
+  \end{itemize}
+
+  \begin{textblock*}{40mm}[0.,0.](80mm,37mm)
+    \visible<2->{
+      \includegraphics[width=40mm]{img-src/usb-hub}
+    }
+  \end{textblock*}
+
+  \begin{textblock*}{55mm}[0.,0.](15mm,50mm)
+    \visible<3->{
+      \includegraphics[width=55mm]{img-src/uni-stick-ausgabe-vortrag}
+    }
+  \end{textblock*}
+
+  \begin{textblock*}{55mm}[0.,0.](71mm,63mm)
+    \visible<4->{
+      \begin{itemize}
+       \item Accessibility:
+       \hspace{-5mm}
+       \begin{itemize}
+        \item brltty
+        \item gnome-orca (Screenreader)
+        \item ...
+        \item WIP!
+       \end{itemize}
+
+       
+       
+      \end{itemize}
+
+    }
+  \end{textblock*}
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ct3]
+  \frametitle{Zukunftsideen}
+
+  \begin{itemize}
+  \item Fortführung "`Uni-Stick"'
+  \item Studierende zum Nutzen/Verbessern freier Software animieren
+    \begin{itemize}
+    \item Mehr Blog-Beiträge
+    \item Kurse (\LaTeX / Python / Git / Inkscape / \dots)
+    \item Ansible-Infrastruktur-Stipendium
+    \item OpenSource-Wettbewerb/Preis
+    \item \dots
+    \end{itemize}
+
+    \bigskip
+
+  \item Aufmerksamkeit erzeugen / Lobby-Arbeit
+
+    \bigskip
+
+  \item Vernetzung mit anderen Städten
+
+  \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ct4]
+  \frametitle{Weitere Informationen}
+
+  \onslide<+->
+
+  \begin{center}
+    \url{https://fsfw-dresden.de/}
+    % HACK THE PLANET!
+    $\;\;\left\{\;\;\text{
+        \parbox{2.3cm}{
+          \texttt{uni-stick}\\[1mm]
+          \texttt{blog}\\[1mm]
+          \texttt{newsletter}
+          \texttt{mitmachen}\\[1mm]
+          \texttt{fork}\\[-3mm]
+        }}
+    \right.$
+
+    \vspace*{2\bigskipamount}
+
+    \includegraphics[width=50mm]{img-src/fsfw-netzwerke}
+  \end{center}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[label=wb2]
+
+\begin{center}
+ \vspace{10mm}
+\structure{\Huge  </Eigenwerbung>}
+\end{center}
+ 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ol1]
+  \frametitle{Gliederung}
+  \begin{itemize}
+   \item Einführung
+   \item Sammlung von Argumenten und Diskussion\\
+   ("`Ich habe doch nichts zu verbergen"')
+   \item Theoretischer Hintergrund und Begriffsklärungen
+   \item Unterstützung bei Installation und Einrichtung (Zeit?)
+   \begin{itemize}
+    \item GPG-Enigmail (Thunderbird)
+   \item Mailvelope (Webmail)
+   \end{itemize}
+
+  \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ef1]
+  \frametitle{Einführung }
+  In der Geschichte der Menschheit...
+  \begin{itemize}
+   \item  ... kein Mangel an Beispielen für \textbf{rücksichtslosen Egoismus}
+   \item Ausnutzung von Macht zu persönlichem Vorteil
+   \pause
+   \item "`Wissen ist Macht"'
+   
+   \item[$\Rightarrow$] sensibler Umgang mit Informationen empfehlenswert\\[2mm]
+   
+   \pause
+   \item Digitalisierung verstärkt das Problem:
+   \item E-Mail${}^1$ ist wie Postkarte: unterwegs${}^{2}$ lesbar
+   \item E-Mail ist schlimmer als Postkarte:
+   \begin{itemize}
+    \item automatisiert auswertbar
+    \item unbemerkt kopierbar
+    \item unbemerkt veränderbar (inkl. Absender)
+   \end{itemize}
+
+  \end{itemize}
+  
+  ~\\[5mm]
+  {\tiny $1$: E-Mail = Beispielmedium \qquad $2$: ggf. um die ganze Welt }
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ef2]
+
+  \frametitle{Einführung 2}
+
+Schutzziele sicherer Kommunikation:
+  \begin{itemize}
+   \item[$\square$] Vertraulichkeit
+   
+   \item[$\square$] Integrität (keine Veränderung)
+   
+   \item[$\square$] Anonymität
+  \end{itemize}
+
+\end{frame}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=d1]
+  \frametitle{"`Ich habe doch nichts zu verbergen"'}
+  10min freie Diskussion
+  
+  \begin{itemize}
+   \item  je 2-5 Personen
+   \item verschiedene Perspektiven\\
+  (Bürgerrechtler*in, Innenminister*in)
+   \item Argumente aufschreiben
+  \end{itemize}
+  \pause
+  Stichworte:
+  \begin{itemize}
+   \item Kriminalität (Einbruch, Erpressung, ...)
+   \item Privatsphäre
+   \item Selbstzensur (analog: Kamera-Attrappen)
+   \item Demokratie
+   \item Journalismus
+   \item Whistleblowing
+   \item Erstarken totalitärer Strukturen
+   
+  \end{itemize}
+
+  
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=begriffe]
+  \frametitle{Begriffe}
+  
+  \begin{columns}
+\column[t]{0.48\textwidth}
+
+  \begin{itemize}
+   \item asymmetrisches Verfahren
+   \item Privater Schlüssel
+   \item Öffentlicher Schlüssel
+   \item Verschlüsseln
+   \item Signieren / Signatur
+   \item Schlüsselserver
+   \item Web of Trust
+   \item Widerrufszertifikat
+   \item Cryptoparty
+  \end{itemize}
+  \column[t]{0.6\textwidth}
+  \begin{itemize}
+   \item Fingerabdruck
+   \item Metadaten
+   \item GPG vs PGP {\tiny vs S/MIME}
+   \item Enigmail vs Mailvelope
+  \end{itemize}
+\end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[label=bg2]
+  \frametitle{Hintergrundwissen 1}
+  
+  \begin{itemize}
+   \item Schlüsselverteilungsproblem
+   \item[$\Rightarrow$] asymmetrisches Verschlüsselungsverfahren
+   \begin{itemize}
+    \item $\exists$ \textbf{ö}ffentlicher \textbf{S}chlüssel
+    und \textbf{p}rivater \textbf{S}chlüssel
+    \item sehr große zufällige Zahlen (dargestellt als \href{https://cknoll.github.io/files/pub-key-carsten.txt}{Zeichen}%
+    \href{file:///home/ck/pub-key-carsten-demo.txt}{salat})
+   \end{itemize}
+   \pause
+   % padlock: <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+   \item ÖS: zum Verschlüsseln \hspace{5mm}\includegraphics[width=10mm]{img-src/padlock-lock}
+   
+   %key: <div>Icons made by <a href="http://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+   
+   \item PS: zum Entschlüsseln \hspace{5mm}{\vspace*{4mm}\includegraphics[width=19mm]{img-src/padlock-unlock-with-key}}
+
+  \end{itemize}
+\pause
+  Oft eingesetzt: \texttt{GPG} (\textbf{G}nu\textbf{P}rivacy\textbf{G}uard) $=$ Freie Software\\[2mm]
+  {\tiny Vorläufer: \texttt{PGP} (\textbf{P}retty \textbf{G}ood \textbf{P}rivacy) $\neq$ Freie Software, Namensgeber des Verfahrens}\\
+  {\tiny S/MIME: anderes Verfahren, hier nicht weiter behandelt}
+  
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=bg3]
+  \frametitle{Hintergrundwissen 2}
+  
+    \begin{itemize}
+   % padlock: <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+   \item Öffentlicher Schlüssel ("`public key"')
+   \begin{itemize}
+    \item Benötigt zum Verschlüsseln
+    \item Sollten alle haben, von denen man verschlüsselte Mails empfangen möchte
+    \item kann/sollte man weitergeben $\rightarrow$ Keyserver auf hochladen\\
+    {\tiny Bsp: \url{http://pgp.mit.edu} \quad Bedenkenswert: Nicht löschen, nur Widerrufen $\rightarrow$ Anonymität?}
+    
+   \end{itemize}
+   \pause
+   \item Privater Schlüssel ("`private key"')
+   \begin{itemize}
+    \item Benötigt zum Entschlüsseln
+    \item Darf nicht verloren gehen\\$\rightarrow$ Entschlüsseln wäre dann unmöglich\\[1mm]
+    \item Darf nicht in fremde Hände kommen\\ $\rightarrow$ andere können meine Mails entschlüsseln\\[1mm]
+    \item Typischerweise nochmal zusätzlich mit einem Passwort verschlüsselt\\[2mm]
+    \pause
+    \item[$\Rightarrow$] Sicheres Backup wichtig
+   \end{itemize}
+
+
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}[label=bg3a]{Hintergrundwissen 3}
+Was wird verschlüsselt?
+\begin{itemize}
+\item Text
+\item Anhänge {\tiny Format-Empfehlung: \texttt{PGP/MIME} \quad nicht: \texttt{Inline PGP}}
+\item[]
+\end{itemize}
+Was wird nicht Verschlüsselt?
+\begin{itemize}
+ \item Metadaten
+ \begin{itemize}
+  \item Absender*in, Empfänger*in, \textbf{Betreff!}, ...
+  \item[]
+ \end{itemize}
+\end{itemize}
+Umsetzung:
+\begin{itemize}
+ \item Enigmail (GPG-Plugin für Thunderbird)
+ \item Mailvelope (GPG-Plugin für Firefox / Chrome $\rightarrow$ Webmail)
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=bg4]{Hintergrundwissen 4}
+
+
+Schutzziele sicherer Kommunikation:
+  \begin{itemize}
+   \item[$\square$\visible<2->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}]
+   Vertraulichkeit $\rightarrow$ Verschlüsselung 
+   
+   \item[$\square$\visible<5->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}]
+   Integrität (keine Veränderung) 
+   
+   \item[$\square$\scalebox{1.25}{~}] Anonymität
+  \end{itemize}
+  \pause
+  \pause
+  ~\\[3mm]
+  
+  
+  Integrität durch Signieren
+  
+  \begin{itemize}
+   \item Prinzip: mit PS verschlüsselte Prüfsumme der Nachricht
+   \item Überprüfen $=$ Entschlüsseln mit ÖS
+   \item[$\Rightarrow$] Man muss dem öffentlichen Schlüssel vertrauen\\[2mm]
+   \pause
+   \item Schlüssel signieren bei persönlichem Treffen $\rightarrow$ "`Web of trust"'
+   \item Fingerabdruck-Bsp: {\tiny \texttt{214E 4E9D B193 6AF2 CFDC 68DF 13AD 3604 9D3E F6BF}}
+  \end{itemize}
+
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=bg5]{Hintergrundwissen 5}
+$\square$\visible<3->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}} Anonymität mittels Tor (Ehem. \textbf{T}he \textbf{O}nion \textbf{R}outer)
+
+\begin{center}
+\includegraphics[width=0.6\columnwidth]{img-src/TOR_Arbeitsweise}
+\end{center}
+
+\pause 
+\begin{itemize}
+\item {\small \url{https://www.torproject.org/projects/torbrowser.html}}
+\item Nachteile: Geschwindigkeit
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\againframe{begriffe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=wb]
+
+\begin{center}
+ \vspace{10mm}
+{\Huge  "`Paranoia und Resignation sollte man denen überlassen, die sich damit [IT-Sicherheit] auskennen."'}
+\end{center}
+ 
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[label=lk1]{Links}
+\begin{itemize}
+\item[] \hspace{-2em} PGP-Verschlüsselung in Thunderbird (Plugin "`Enigmail"')
+\item \url{https://fsfw-dresden.de/gpg}\\[4mm]
+\item[] \hspace{-2em} PGP-Verschlüsselung für Webmail
+\item \url{https://vimeo.com/178702500} (Screencast)\\[2mm]
+\item \href{https://posteo.de/hilfe/wie-installiere-ich-eine-ende-zu-ende-verschluesselung-pgp-im-browser}{Anleitung von Posteo}
+\item[] \hspace{-2em} Allgemeine Infos
+\item \url{https://virtual-privacy.org/}
+\item[] \hspace{-2em} Cryptopartys
+\item {\tiny \url{https://www.cryptoparty.in/}; \quad | \quad \url{https://de.wikipedia.org/wiki/CryptoParty}}
+\item[] \hspace{-2em} Videos
+\item 
+{\tiny \href{https://www.ted.com/talks/glenn_greenwald_why_privacy_matters}{G. Greenwald: \textit{Why privacy matters}}\quad | \quad
+\href{https://www.youtube.com/watch?v=XEVlyP4_11M}{J. Oliver + E. Snwoden (lustig)}}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[label=uj]{Und jetzt?}
+\begin{itemize}
+ \item Fragen?\\[10mm]
+ \item Unterstützung jetzt bei Installation
+ \begin{itemize}
+  \item Enigmail (Plugin für Thunderbird)
+  \item Mailvelope (Browserplugin für Webmail)
+  \item \scalebox{1.9}{$\triangle$}\hspace{-1.0em}\raisebox{.2em}{!} \hspace{0.5em} Zeit?\\[5mm]
+  \pause
+  \end{itemize}
+  \item Unterstützung später {\tiny (im Rahmen unserer Möglichkeiten)}:
+  \begin{itemize}
+   \item \url{https://fsfw-dresden.de/gpg} (diese Vortragsfolien)
+   \item \url{https://fsfw-dresden.de/sprechstunde}
+   \item \url{kontakt@fsfw-dresden.de}
+  
+ \end{itemize}
+ \pause
+ \item[]
+ \item Verschlüsselung regelmäßig nutzen, Erfahrung sammeln
+ \item Selber aktiv werden {\tiny "`Wer, wenn nicht wir? Wann, wenn nicht jetzt?"'}
+
+\end{itemize}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
