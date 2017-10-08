@@ -1,5 +1,5 @@
 \documentclass{beamer}
-% \includeonlyframes{uj}
+%\includeonlyframes{uj}
 \synctex=1
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -13,8 +13,9 @@
 \synctex=1
 \usepackage{lmodern}
 
+\usepackage{tabularx}
+\def\tabularxcolumn#1{m{#1}}
 
-% \usepackage{lmodern}
 % \usepackage{anyfontsize}
 
 \hypersetup{
@@ -28,24 +29,20 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}[frame number]
 
-\title{Verschlüsselte Kommunikation: Warum und wie.}
-\subtitle{Kreta WiSe 2017/18}
-
-% 
-% Logo rechts oben:
-% \addtobeamertemplate{frametitle}{}{%
-%   \begin{textblock*}{130mm}(.963\textwidth,8.4mm)
-%     \includegraphics[width=2.25cm]{img-src/fsfw-logo.pdf}
-%   \end{textblock*}
-% }
+\title{Sichere Kommunikation: Warum \& Wie}
+\subtitle{KRETA – Oktober 2017}
 
 \begin{document}
 
 \begin{frame}
   \begin{center}%
-  [Kreta-Logo] + 
-    \includegraphics[width=3cm]{img-src/fsfw-logo-with-text.pdf}\\[4mm]
-    \vspace*{-0.5\baselineskip}
+    \begin{tabularx}{7cm}{XcX}
+      \includegraphics[width=2.5cm]{img-src/kreta-logo.png}
+      &+&
+      \includegraphics[width=3cm]{img-src/fsfw-logo-with-text.pdf}
+    \end{tabularx}
+    
+    \vspace*{2\baselineskip}
 
     \parbox{.95\columnwidth}{\centering\Large\inserttitle}
 
@@ -58,8 +55,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ct1]
-  \frametitle{Wer sind wir? $\rightarrow$ FSFW}
+\begin{frame}[label=ct1]{Wer sind wir?}
 
   \begin{columns}
  
@@ -113,171 +109,195 @@
 \column[t]{0.1\textwidth}
 ~
 \end{columns}
-  
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ol1]
-  \frametitle{Gliederung}
-  \begin{itemize}
-   \item Einführung
-   \item Sammlung von Argumenten und Diskussion\\
-   ("`Ich habe doch nichts zu verbergen"')
-   \item Theoretischer Hintergrund und Begriffsklärungen
-   \item Unterstützung bei Installation und Einrichtung (Zeit?)
-   \begin{itemize}
-    \item GPG-Enigmail (Thunderbird)
-   \item Mailvelope (Webmail)
-   \end{itemize}
+\begin{frame}[label=ol1]{Ablauf}
 
+  \textbf{1) Verschlüsselung in der Theorie}
+  \begin{itemize}
+   \item Diskussion: "`Ich habe doch nichts zu verbergen"'
+   \item Schutzziele sicherer Kommunikation
+   \item Funktionsweise PGP
+  \end{itemize}
+
+  \pause
+
+  \textbf{2) PGP in der Praxis}
+  \begin{itemize}
+   \item Installation (individuell)
+   \item Schlüsselgenerierung
+   \item E-Mails verschlüsseln und signieren
+   \item Ausblick
   \end{itemize}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ef1]
-  \frametitle{Einführung }
-  In der Geschichte der Menschheit...
+\begin{frame}[label=d1]{Diskussion: "`Ich habe doch nichts zu verbergen"'}
+  $\rightarrow$ 10 Minuten freie Diskussion
+  
   \begin{itemize}
-   \item  ... kein Mangel an Beispielen für \textbf{rücksichtslosen Egoismus}
-   \item Ausnutzung von Macht zu persönlichem Vorteil
+   \item  je 2-5 Personen
+   \item möglichst viele verschiedene Perspektiven einnehmen\\
+  (Bürger*in, Bürgerrechtler*in, Innenminister*in, Freiheitskämpfer*in, …)
+   \item Argumente sammeln
+
    \pause
+
+   \item Stichworte
+    \begin{itemize}
+     \item Kriminalität (Einbruch, Erpressung, …)
+     \item Privatsphäre
+     \item Selbstzensur (analog: Kamera-Attrappen)
+     \item Demokratie
+     \item Journalismus
+     \item Whistleblowing
+     \item Erstarken totalitärer Strukturen
+    \end{itemize}
+  \end{itemize}
+
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=ef1]{"`Ich habe doch nichts zu verbergen"'}
+  
+  \begin{itemize}
+   \item  In Menschheitsgeschichte:\\
+   viele Beispiele für \textbf{rücksichtslosen Egoismus}
+   %\item Ausnutzung von Macht zu persönlichem Vorteil   
    \item "`Wissen ist Macht"'
-   
-   \item[$\Rightarrow$] sensibler Umgang mit Informationen empfehlenswert\\[2mm]
+   \item[$\Rightarrow$] sensibler Umgang mit Informationen empfehlenswert\\[5mm]
    
    \pause
-   \item Digitalisierung verstärkt das Problem:
+
+   \item \textbf{Digitalisierung verstärkt das Problem}
    \item E-Mail${}^1$ ist wie Postkarte: unterwegs${}^{2}$ lesbar
-   \item E-Mail ist schlimmer als Postkarte:
+   \item E-Mail ist noch schlimmer als Postkarte:
    \begin{itemize}
     \item automatisiert auswertbar
     \item unbemerkt kopierbar
-    \item unbemerkt veränderbar (inkl. Absender)
+    \item unbemerkt veränderbar (inkl. Metadaten, bspw. Absender)
    \end{itemize}
-
   \end{itemize}
   
   ~\\[5mm]
-  {\tiny $1$: E-Mail = Beispielmedium \qquad $2$: ggf. um die ganze Welt }
+  {\tiny $1$: E-Mail = nur Beispielmedium \qquad $2$: ggf. um die ganze Welt }
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ef2]
+\begin{frame}[label=ef2]{Schutzziele sicherer Kommunikation}
 
-  \frametitle{Einführung 2}
-
-Schutzziele sicherer Kommunikation:
   \begin{itemize}
-   \item[$\square$] Vertraulichkeit
-   
-   \item[$\square$] Integrität (keine Veränderung)
-   
-   \item[$\square$] Anonymität
+   \item[$\square$] \textbf{Vertraulichkeit}\\
+   $\rightarrow$ A weiß, nur B kann Nachricht lesen
+
+   \pause
+
+   \item[$\square$] \textbf{Integrität}\\
+   $\rightarrow$ B weiß, die Nachricht ist nur von A geschrieben, nicht verändert
+
+   \pause
+
+   \item[$\square$] \textbf{Anonymität}\\
+   $\rightarrow$ A bestimmt, wem sie ihre Identität preisgibt
+
+   \pause
+
+   \item[$\square$] \textbf{Verfügbarkeit}\\
+   $\rightarrow$ Schutzziele werden in annehmbarer Zeit realisiert
   \end{itemize}
 
 \end{frame}
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=d1]
-  \frametitle{"`Ich habe doch nichts zu verbergen"'}
-  10min freie Diskussion
-  
-  \begin{itemize}
-   \item  je 2-5 Personen
-   \item verschiedene Perspektiven\\
-  (Bürgerrechtler*in, Innenminister*in)
-   \item Argumente aufschreiben
-  \end{itemize}
-  \pause
-  Stichworte:
-  \begin{itemize}
-   \item Kriminalität (Einbruch, Erpressung, ...)
-   \item Privatsphäre
-   \item Selbstzensur (analog: Kamera-Attrappen)
-   \item Demokratie
-   \item Journalismus
-   \item Whistleblowing
-   \item Erstarken totalitärer Strukturen
-   
-  \end{itemize}
-
-  
-\end{frame}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[label=begriffe]
-  \frametitle{Begriffe}
+\begin{frame}[label=begriffe]{PGP – Begriffe}
   
   \begin{columns}
-\column[t]{0.48\textwidth}
-
+  \column[t]{0.48\textwidth}
   \begin{itemize}
-   \item asymmetrisches Verfahren
-   \item Privater Schlüssel
-   \item Öffentlicher Schlüssel
-   \item Verschlüsseln
-   \item Signieren / Signatur
-   \item Schlüsselserver
-   \item Web of Trust
-   \item Widerrufszertifikat
-   \item Cryptoparty
+   \item asymmetrische Verschlüsselung
+   \item Privater Schlüssel\\(\textit{private key})
+   \item Öffentlicher Schlüssel\\(\textit{public key})
+   \item GPG vs. PGP
   \end{itemize}
+
+  \pause
+
   \column[t]{0.6\textwidth}
   \begin{itemize}
+   \item Schlüsselserver (\textit{keyserver})
    \item Fingerabdruck
    \item Metadaten
-   \item GPG vs PGP {\tiny vs S/MIME}
-   \item Enigmail vs Mailvelope
+   \item Widerrufszertifikat
   \end{itemize}
 \end{columns}
 \end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[label=bg2]
-  \frametitle{Hintergrundwissen 1}
+\begin{frame}[label=bg2]{PGP – Das Problem}
   
   \begin{itemize}
-   \item Schlüsselverteilungsproblem
+   \item P1) A möchte Nachricht an B vertraulich schicken\\
+   \item[$\Rightarrow$] Nachricht verschlüsseln
+
+   \pause
+
+   \vspace*{.5\baselineskip}
+
+   \item P2) Schlüsselverteilung\\
    \item[$\Rightarrow$] asymmetrisches Verschlüsselungsverfahren
    \begin{itemize}
-    \item $\exists$ \textbf{ö}ffentlicher \textbf{S}chlüssel
-    und \textbf{p}rivater \textbf{S}chlüssel
-    \item sehr große zufällige Zahlen (dargestellt als \href{https://cknoll.github.io/files/pub-key-carsten.txt}{Zeichen}%
-    \href{file:///home/ck/pub-key-carsten-demo.txt}{salat})
+    \item Es gibt: \textbf{ö}ffentlicher \textbf{S}chlüssel und \textbf{p}rivater \textbf{S}chlüssel
+    %\item sehr große zufällige Zahlen (dargestellt als \href{https://cknoll.github.io/files/pub-key-carsten.txt}{Zeichen}\href{file:///home/ck/pub-key-carsten-demo.txt}{salat})
    \end{itemize}
+   
    \pause
-   % padlock: <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-   \item ÖS: zum Verschlüsseln \hspace{5mm}\includegraphics[width=10mm]{img-src/padlock-lock}
-   
-   %key: <div>Icons made by <a href="http://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
+   \vspace*{.5\baselineskip}
+
+   \item \textbf{ÖS}: zum Verschlüsseln\\
+   {\vspace*{4mm}\hspace{10mm}\includegraphics[width=10mm]{img-src/padlock-lock}}
    
-   \item PS: zum Entschlüsseln \hspace{5mm}{\vspace*{4mm}\includegraphics[width=19mm]{img-src/padlock-unlock-with-key}}
+   
+   \item \textbf{PS}: zum Entschlüsseln\\
+   {\vspace*{4mm}\hspace{10mm}\includegraphics[width=19mm]{img-src/padlock-unlock-with-key}}
 
   \end{itemize}
-\pause
-  Oft eingesetzt: \texttt{GPG} (\textbf{G}nu\textbf{P}rivacy\textbf{G}uard) $=$ Freie Software\\[2mm]
-  {\tiny Vorläufer: \texttt{PGP} (\textbf{P}retty \textbf{G}ood \textbf{P}rivacy) $\neq$ Freie Software, Namensgeber des Verfahrens}\\
-  {\tiny S/MIME: anderes Verfahren, hier nicht weiter behandelt}
-  
-  
+
+  \pause
+
+  Oft eingesetzt: \texttt{GPG} (\textbf{G}nu\textbf{P}rivacy\textbf{G}uard) $=$ freie Software\\[2mm]
+  {\tiny Vorläufer: \texttt{PGP} (\textbf{P}retty \textbf{G}ood \textbf{P}rivacy) keine freie Software, Namensgeber des Verfahrens}\\  
+
+
+% padlock: <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+% key: <div>Icons made by <a href="http://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=bg3]
-  \frametitle{Hintergrundwissen 2}
+\begin{frame}{PGP – Funktionsweise 1}
+
+\begin{center}
+\includegraphics[width=\textwidth]{img-src/pgp_ver_entschluesseln.png}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=bg3]{PGP – Funktionsweise 2}
   
     \begin{itemize}
    % padlock: <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
@@ -305,7 +325,45 @@ Schutzziele sicherer Kommunikation:
   
 \end{frame}
 
-\begin{frame}[label=bg3a]{Hintergrundwissen 3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{PGP – Funktionsweise 3}
+\begin{center}
+\includegraphics[width=\textwidth]{img-src/pgp_kommunikationskanal.png}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[label=lk1]{Praxisteil – Installation}
+  Anleitungen
+  \begin{itemize}
+    \item Linux \& Windows\\
+    \url{https://fsfw-dresden.de/gpg}
+    \item OS X\\
+    \url{https://gpgtools.tenderapp.com/kb/how-to/erste-schritte-gpgtools-einrichten-einen-schlssel-erstellen-deine-erste-verschlsselte-mail}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\begin{frame}{Integrität durch Signieren}
+  
+  \begin{itemize}
+   \item Prinzip: mit PS verschlüsselte Prüfsumme der Nachricht
+   \item Überprüfen $=$ Entschlüsseln mit ÖS
+   \item[$\Rightarrow$] Man muss dem öffentlichen Schlüssel vertrauen\\[2mm]
+   
+   \pause
+   
+   \item Schlüssel signieren bei persönlichem Treffen (Keysharing-Party) $\rightarrow$ "`Web of trust"'
+   \item Fingerabdruck-Bsp: {\tiny \texttt{214E 4E9D B193 6AF2 CFDC 68DF 13AD 3604 9D3E F6BF}}
+  \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=bg3a]{Ausblick}
 Was wird verschlüsselt?
 \begin{itemize}
 \item Text
@@ -320,121 +378,25 @@ Was wird nicht Verschlüsselt?
   \item[]
  \end{itemize}
 \end{itemize}
-Umsetzung:
-\begin{itemize}
- \item Enigmail (GPG-Plugin für Thunderbird)
- \item Mailvelope (GPG-Plugin für Firefox / Chrome $\rightarrow$ Webmail)
-\end{itemize}
-
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Weitereführendes}
 
-\begin{frame}[label=bg4]{Hintergrundwissen 4}
-
-
-Schutzziele sicherer Kommunikation:
-  \begin{itemize}
-   \item[$\square$\visible<2->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}]
-   Vertraulichkeit $\rightarrow$ Verschlüsselung 
-   
-   \item[$\square$\visible<5->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}]
-   Integrität (keine Veränderung) 
-   
-   \item[$\square$\scalebox{1.25}{~}] Anonymität
-  \end{itemize}
-  \pause
-  \pause
-  ~\\[3mm]
-  
-  
-  Integrität durch Signieren
-  
-  \begin{itemize}
-   \item Prinzip: mit PS verschlüsselte Prüfsumme der Nachricht
-   \item Überprüfen $=$ Entschlüsseln mit ÖS
-   \item[$\Rightarrow$] Man muss dem öffentlichen Schlüssel vertrauen\\[2mm]
-   \pause
-   \item Schlüssel signieren bei persönlichem Treffen $\rightarrow$ "`Web of trust"'
-   \item Fingerabdruck-Bsp: {\tiny \texttt{214E 4E9D B193 6AF2 CFDC 68DF 13AD 3604 9D3E F6BF}}
-  \end{itemize}
-
-  
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[label=bg5]{Hintergrundwissen 5}
-$\square$\visible<3->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}} Anonymität mittels Tor (Ehem. \textbf{T}he \textbf{O}nion \textbf{R}outer)
-
-\begin{center}
-\includegraphics[width=0.6\columnwidth]{img-src/TOR_Arbeitsweise}
-\end{center}
-
-\pause 
 \begin{itemize}
-\item {\small \url{https://www.torproject.org/projects/torbrowser.html}}
-\item Nachteile: Geschwindigkeit
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\againframe{begriffe}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[label=lk1]{Links}
-\begin{itemize}
-\item[] \hspace{-2em} PGP-Verschlüsselung in Thunderbird (Plugin "`Enigmail"')
-\item \url{https://fsfw-dresden.de/gpg}\\[4mm]
 \item[] \hspace{-2em} PGP-Verschlüsselung für Webmail
-\item \url{https://vimeo.com/178702500} (Screencast)\\[2mm]
-\item \href{https://posteo.de/hilfe/wie-installiere-ich-eine-ende-zu-ende-verschluesselung-pgp-im-browser}{Anleitung von Posteo}
-\item[] \hspace{-2em} Allgemeine Infos
-\item \url{https://virtual-privacy.org/}
-\item[] \hspace{-2em} Cryptopartys
-\item {\tiny \url{https://www.cryptoparty.in/}; \quad | \quad \url{https://de.wikipedia.org/wiki/CryptoParty}}
-\item[] \hspace{-2em} Videos
-\item 
-{\tiny \href{https://www.ted.com/talks/glenn_greenwald_why_privacy_matters}{G. Greenwald: \textit{Why privacy matters}}\quad | \quad
-\href{https://www.youtube.com/watch?v=XEVlyP4_11M}{J. Oliver + E. Snwoden (lustig)}}
+  \item \url{https://vimeo.com/178702500} (Screencast)\\[2mm]
+  \item \href{https://posteo.de/hilfe/wie-installiere-ich-eine-ende-zu-ende-verschluesselung-pgp-im-browser}{Anleitung von Posteo}
+  \item[] \hspace{-2em} Allgemeine Infos
+  \item \url{https://virtual-privacy.org}
+  \item[] \hspace{-2em} Cryptopartys
+  \item \url{https://www.cryptoparty.in}
+  \item \url{https://de.wikipedia.org/wiki/CryptoParty}
+  \item[] \hspace{-2em} Videos
+  \item \href{https://www.ted.com/talks/glenn_greenwald_why_privacy_matters}{G. Greenwald: \textit{Why privacy matters}}
+  \item \href{https://www.youtube.com/watch?v=XEVlyP4_11M}{J. Oliver + E. Snwoden (lustig)}
 \end{itemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[label=uj]{Und jetzt?}
-\begin{itemize}
- \item Fragen?\\[10mm]
- \item Unterstützung jetzt bei Installation
- \begin{itemize}
-  \item Enigmail (Plugin für Thunderbird)
-  \item Mailvelope (Browserplugin für Webmail)
-  \item \scalebox{1.9}{$\triangle$}\hspace{-1.0em}\raisebox{.2em}{!} \hspace{0.5em} Zeit?\\[5mm]
-  \pause
-  \end{itemize}
-  \item Unterstützung später {\tiny (im Rahmen unserer Möglichkeiten)}:
-  \begin{itemize}
-   \item \url{https://fsfw-dresden.de/gpg} (diese Vortragsfolien)
-   \item \url{https://fsfw-dresden.de/sprechstunde}
-   \item \url{kontakt@fsfw-dresden.de}
-  
- \end{itemize}
- \pause
- \item[]
- \item Verschlüsselung regelmäßig nutzen, Erfahrung sammeln
- \item Selber aktiv werden {\tiny "`Wer, wenn nicht wir? Wann, wenn nicht jetzt?"'}
-
-\end{itemize}
-
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
