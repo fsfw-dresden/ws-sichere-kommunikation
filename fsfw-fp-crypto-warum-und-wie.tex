@@ -35,11 +35,12 @@
 \begin{document}
 
 \begin{frame}
-  \begin{center}%
-    \begin{tabularx}{7cm}{XcX}
-      \includegraphics[width=2.5cm]{img-src/kreta-logo.png}
-      &+&
-      \includegraphics[width=3cm]{img-src/fsfw-logo-with-text.pdf}
+  \begin{center}
+    \begin{tabularx}{7cm}{cc}
+      \includegraphics[width=2.5cm]{img-src/kreta-logo.png}&
+      \includegraphics[width=3cm]{img-src/fsfw-logo-with-text.pdf}\\
+      Joschka Heinrich${}^{1}$&
+      Carsten Knoll${}^{2}$
     \end{tabularx}
     
     \vspace*{2\baselineskip}
@@ -49,13 +50,17 @@
     \vspace*{\baselineskip}
 
     \structure{\large \insertsubtitle}
+
   \end{center}
+
+  ~\\[5mm]
+  {\tiny $1$ joschka.heinrich@tu-dresden.de \qquad $2$ casten.knoll@tu-dresden.de}
 \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ct1]{Wer sind wir?}
+\begin{frame}[label=ct1]{FSFW – Freie Software und Freies Wissen}
 
   \begin{columns}
  
@@ -106,7 +111,7 @@
 }
 \end{textblock*}  
 
-\column[t]{0.1\textwidth}
+\column[t]{.1\textwidth}
 ~
 \end{columns}
 
@@ -177,7 +182,7 @@
    \pause
 
    \item \textbf{Digitalisierung verstärkt das Problem}
-   \item E-Mail${}^1$ ist wie Postkarte: unterwegs${}^{2}$ lesbar
+   \item E-Mail${}^{1}$ ist wie Postkarte: unterwegs${}^{2}$ lesbar
    \item E-Mail ist noch schlimmer als Postkarte:
    \begin{itemize}
     \item automatisiert auswertbar
@@ -202,17 +207,17 @@
    \pause
 
    \item[$\square$] \textbf{Integrität}\\
-   $\rightarrow$ B weiß, die Nachricht ist nur von A geschrieben, nicht verändert
+   $\rightarrow$ B weiß, die Nachricht ist nur von A geschrieben und nicht verändert wurden
 
    \pause
 
    \item[$\square$] \textbf{Anonymität}\\
-   $\rightarrow$ A bestimmt, wem sie ihre Identität preisgibt
+   $\rightarrow$ A bestimmt, wem eigene Identität preisgegeben wird
 
    \pause
 
    \item[$\square$] \textbf{Verfügbarkeit}\\
-   $\rightarrow$ Schutzziele werden in annehmbarer Zeit realisiert
+   $\rightarrow$ obige Schutzziele werden in annehmbarer Zeit realisiert
   \end{itemize}
 
 \end{frame}
@@ -222,7 +227,7 @@
 \begin{frame}[label=begriffe]{PGP – Begriffe}
   
   \begin{columns}
-  \column[t]{0.48\textwidth}
+  \column[t]{.48\textwidth}
   \begin{itemize}
    \item asymmetrische Verschlüsselung
    \item Privater Schlüssel\\(\textit{private key})
@@ -232,7 +237,7 @@
 
   \pause
 
-  \column[t]{0.6\textwidth}
+  \column[t]{.6\textwidth}
   \begin{itemize}
    \item Schlüsselserver (\textit{keyserver})
    \item Fingerabdruck
@@ -256,30 +261,29 @@
    \vspace*{.5\baselineskip}
 
    \item P2) Schlüsselverteilung\\
-   \item[$\Rightarrow$] asymmetrisches Verschlüsselungsverfahren
+   \item[$\Rightarrow$] asymmetrisches Verschlüsselungsverfahren (\texttt{PGP})
    \begin{itemize}
     \item Es gibt: \textbf{ö}ffentlicher \textbf{S}chlüssel und \textbf{p}rivater \textbf{S}chlüssel
     %\item sehr große zufällige Zahlen (dargestellt als \href{https://cknoll.github.io/files/pub-key-carsten.txt}{Zeichen}\href{file:///home/ck/pub-key-carsten-demo.txt}{salat})
+   
+    \pause
+
+    \vspace*{.5\baselineskip}
+
+    \item \textbf{ÖS}: zum Verschlüsseln\\
+    {\vspace*{4mm}\hspace{12mm}\includegraphics[width=8mm]{img-src/padlock-lock}}
+   
+   
+    \item \textbf{PS}: zum Entschlüsseln\\
+    {\vspace*{4mm}\hspace{4mm}\includegraphics[width=14mm]{img-src/padlock-unlock-with-key}}
+
    \end{itemize}
-   
-   \pause
-
-   \vspace*{.5\baselineskip}
-
-   \item \textbf{ÖS}: zum Verschlüsseln\\
-   {\vspace*{4mm}\hspace{10mm}\includegraphics[width=10mm]{img-src/padlock-lock}}
-   
-   
-   \item \textbf{PS}: zum Entschlüsseln\\
-   {\vspace*{4mm}\hspace{10mm}\includegraphics[width=19mm]{img-src/padlock-unlock-with-key}}
-
   \end{itemize}
 
   \pause
 
-  Oft eingesetzt: \texttt{GPG} (\textbf{G}nu\textbf{P}rivacy\textbf{G}uard) $=$ freie Software\\[2mm]
-  {\tiny Vorläufer: \texttt{PGP} (\textbf{P}retty \textbf{G}ood \textbf{P}rivacy) keine freie Software, Namensgeber des Verfahrens}\\  
-
+  {\tiny Oft eingesetzte, freie Implementierung: \texttt{GPG} (\textbf{G}NU \textbf{P}rivacy \textbf{G}uard, 1999)\\
+  Nicht freier Vorläufer \& Namensgeber des Verfahrens: \texttt{PGP} (\textbf{P}retty \textbf{G}ood \textbf{P}rivacy, 1991)}
 
 % padlock: <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 % key: <div>Icons made by <a href="http://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
@@ -300,13 +304,12 @@
 \begin{frame}[label=bg3]{PGP – Funktionsweise 2}
   
     \begin{itemize}
-   % padlock: <div>Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
    \item Öffentlicher Schlüssel ("`public key"')
    \begin{itemize}
     \item Benötigt zum Verschlüsseln
     \item Sollten alle haben, von denen man verschlüsselte Mails empfangen möchte
     \item kann/sollte man weitergeben $\rightarrow$ auf Keyserver hochladen\\
-    {\tiny Bsp: \url{http://pgp.mit.edu} \quad Bedenkenswert: Nicht löschen, nur Widerrufen $\rightarrow$ Anonymität?}
+    {\tiny Bsp: \url{http://pgp.mit.edu} \quad zu bedenken: nicht löschbar, nur widerrufbar $\Rightarrow$ Anonymität gefährdet}
     
    \end{itemize}
    \pause
@@ -334,14 +337,58 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[label=lk1]{Praxisteil – Installation}
-  Anleitungen
+
+\begin{frame}[label=lk1]{Praxisteil – Installation 1}
+  
+  \begin{center}
+  \includegraphics[width=.6\textwidth]{img-src/pgp_software.png}
+  \end{center}
+
   \begin{itemize}
-    \item Linux \& Windows\\
-    \url{https://fsfw-dresden.de/gpg}
-    \item OS X\\
-    \url{https://gpgtools.tenderapp.com/kb/how-to/erste-schritte-gpgtools-einrichten-einen-schlssel-erstellen-deine-erste-verschlsselte-mail}
+    \item Anleitungen: \url{https://fsfw-dresden.de/gpg}
   \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=lk1]{Praxisteil – Installation 2}
+  \begin{itemize}
+  \item Anleitungen: \url{https://fsfw-dresden.de/gpg}
+  \item temporäre E-Mailadressen zum Test:
+  \begin{itemize}
+    \item Adresse/User: \texttt{pgp-test-0$x$@hejn.de} ($x = 1 .. 5$)
+    \item Mailserver: \texttt{vega.uberspace.de}
+    \item IMAP, Port: 993
+    \item Passwort: \texttt{fingerprint}
+  \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=lk1]{Schlüsselgenerierung}
+  \begin{center}
+  \includegraphics[width=.8\textwidth]{img-src/pgp_keygen.png}
+  \end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=lk1]{E-Mails verschlüsseln}
+  
+  $\rightarrow$ ÖS sind bereits ausgetauscht!
+  \begin{center}
+  \includegraphics[width=.9\textwidth]{img-src/pgp_enc.png}
+  \end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[label=lk1]{E-Mails entschlüsseln}
+  \begin{center}
+  \includegraphics[width=.9\textwidth]{img-src/pgp_dec.png}
+  \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
