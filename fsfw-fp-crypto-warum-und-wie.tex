@@ -66,15 +66,9 @@
  
 \column[t]{1\textwidth}
 \vspace{-5mm}
-%   \onslide<+->
-
   \begin{itemize}
-  \item Hochschulgruppe seit 2014, ca. 10 Leute (TU, HTW, ...)
-%   \item Hochschulen als Zielgruppe (Multiplikationswirkung)\\
-%     und Arbeitsfeld (Räume, Strukturen)
+  \item Hochschulgruppe seit 2014, ca. 10 Leute (TU, HTW, …)
   \item Warum machen wir das? Aus Überzeugung!
-
-%     \bigskip\onslide<+->
 
   \begin{itemize}
   \item \emph{Überzeugung 1}: freie und quelloffene Software ist (oft) besser\\
@@ -104,17 +98,16 @@
   
 \begin{textblock*}{5cm}[0.,0.](90mm,63mm)
 \only<4>{
-\includegraphics[width=35mm]{img-src/usb-hub}
+  \includegraphics[width=35mm]{img-src/usb-hub}
 }
 \only<5->{
-\includegraphics[width=35mm]{img-src/uni-stick-ausgabe-vortrag}
+  \includegraphics[width=35mm]{img-src/uni-stick-ausgabe-vortrag}
 }
 \end{textblock*}  
 
 \column[t]{.1\textwidth}
 ~
 \end{columns}
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,7 +127,7 @@
   \begin{itemize}
    \item Installation (individuell)
    \item Schlüsselgenerierung
-   \item E-Mails verschlüsseln und signieren
+   \item E-Mails verschlüsseln
    \item Ausblick
   \end{itemize}
 
@@ -165,7 +158,6 @@
     \end{itemize}
   \end{itemize}
 
-  
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -248,7 +240,6 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{frame}[label=bg2]{PGP – Das Problem}
   
@@ -392,8 +383,23 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  
-\begin{frame}{Integrität durch Signieren}
+
+ \begin{frame}[label=lk1]{Ausblick – Schutzziele bei PGP}
+  \begin{itemize}
+   \item[$\square$\visible<2->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}] Vertraulichkeit \visible<2->{$\rightarrow$ Verschlüsselung}
+   
+   \item[$\square$\scalebox{1.25}{~}] Integrität (keine Veränderung) \visible<3->{$\rightarrow$ Signatur notwendig} 
+   
+   \item[$\square$\scalebox{1.25}{~}] Anonymität
+  \end{itemize}
+  \pause
+  \pause
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Ausblick – Signieren}
   
   \begin{itemize}
    \item Prinzip: mit PS verschlüsselte Prüfsumme der Nachricht
@@ -410,18 +416,18 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=bg3a]{Ausblick}
+\begin{frame}[label=bg3a]{Ausblick – Nachteile PGP}
 Was wird verschlüsselt?
 \begin{itemize}
 \item Text
 \item Anhänge {\tiny Format-Empfehlung: \texttt{PGP/MIME} \quad nicht: \texttt{Inline PGP}}
 \item[]
 \end{itemize}
-Was wird nicht Verschlüsselt?
+Was wird nicht verschlüsselt?
 \begin{itemize}
  \item Metadaten
  \begin{itemize}
-  \item Absender*in, Empfänger*in, \textbf{Betreff!}, ...
+  \item Absender*in, Empfänger*in, \textbf{Betreff}, …
   \item[]
  \end{itemize}
 \end{itemize}
