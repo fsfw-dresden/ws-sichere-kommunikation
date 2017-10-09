@@ -60,7 +60,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ct1]{FSFW – Freie Software und Freies Wissen}
+\begin{frame}{FSFW – Freie Software und Freies Wissen}
 
   \begin{columns}
  
@@ -93,7 +93,7 @@
     \pause
     \pause
     \pause
-    \item Für (Mitmachen-)Interessierte: \url{https://fsfw-dresden.de/}
+    \item Für (Mitmachen-)Interessierte: \url{https://fsfw-dresden.de}
   \end{itemize}
   
 \begin{textblock*}{5cm}[0.,0.](90mm,63mm)
@@ -112,7 +112,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ol1]{Ablauf}
+\begin{frame}{Ablauf}
 
   \textbf{1) Verschlüsselung in der Theorie}
   \begin{itemize}
@@ -135,7 +135,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=d1]{Diskussion: "`Ich habe doch nichts zu verbergen"'}
+\begin{frame}{Diskussion: "`Ich habe doch nichts zu verbergen"'}
   $\rightarrow$ 10 Minuten freie Diskussion
   
   \begin{itemize}
@@ -162,7 +162,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ef1]{"`Ich habe doch nichts zu verbergen"'}
+\begin{frame}{"`Ich habe doch nichts zu verbergen"'}
   
   \begin{itemize}
    \item  In Menschheitsgeschichte:\\
@@ -190,7 +190,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=ef2]{Schutzziele sicherer Kommunikation}
+\begin{frame}{Schutzziele sicherer Kommunikation}
 
   \begin{itemize}
    \item[$\square$] \textbf{Vertraulichkeit}\\
@@ -216,7 +216,7 @@
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=begriffe]{PGP – Begriffe}
+\begin{frame}{PGP – Begriffe}
   
   \begin{columns}
   \column[t]{.48\textwidth}
@@ -241,17 +241,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=bg2]{PGP – Das Problem}
+\begin{frame}{PGP – Das Problem}
   
   \begin{itemize}
-   \item P1) A möchte Nachricht an B vertraulich schicken\\
+   \item \textit{P1:} A möchte Nachricht an B vertraulich schicken\\
    \item[$\Rightarrow$] Nachricht verschlüsseln
 
    \pause
 
    \vspace*{.5\baselineskip}
 
-   \item P2) Schlüsselverteilung\\
+   \item\textit{P2:} Schlüsselverteilung\\
    \item[$\Rightarrow$] asymmetrisches Verschlüsselungsverfahren (\texttt{PGP})
    \begin{itemize}
     \item Es gibt: \textbf{ö}ffentlicher \textbf{S}chlüssel und \textbf{p}rivater \textbf{S}chlüssel
@@ -262,11 +262,11 @@
     \vspace*{.5\baselineskip}
 
     \item \textbf{ÖS}: zum Verschlüsseln\\
-    {\vspace*{4mm}\hspace{12mm}\includegraphics[width=8mm]{img-src/padlock-lock}}
+    {\vspace*{4mm}\hspace{12mm}\includegraphics[width=7mm]{img-src/padlock-lock}}
    
    
     \item \textbf{PS}: zum Entschlüsseln\\
-    {\vspace*{4mm}\hspace{4mm}\includegraphics[width=14mm]{img-src/padlock-unlock-with-key}}
+    {\vspace*{4mm}\hspace{5mm}\includegraphics[width=14mm]{img-src/padlock-unlock-with-key}}
 
    \end{itemize}
   \end{itemize}
@@ -292,7 +292,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=bg3]{PGP – Funktionsweise 2}
+\begin{frame}{PGP – Funktionsweise 2}
   
     \begin{itemize}
    \item Öffentlicher Schlüssel ("`public key"')
@@ -329,7 +329,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=lk1]{Praxisteil – Installation 1}
+\begin{frame}{Praxisteil – Installation 1}
   
   \begin{center}
   \includegraphics[width=.6\textwidth]{img-src/pgp_software.png}
@@ -343,7 +343,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=lk1]{Praxisteil – Installation 2}
+\begin{frame}{Praxisteil – Installation 2}
   \begin{itemize}
   \item Anleitungen: \url{https://fsfw-dresden.de/gpg}
   \item temporäre E-Mailadressen zum Test:
@@ -358,7 +358,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=lk1]{Schlüsselgenerierung}
+\begin{frame}{Schlüsselgenerierung}
   \begin{center}
   \includegraphics[width=.8\textwidth]{img-src/pgp_keygen.png}
   \end{center}
@@ -366,17 +366,21 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=lk1]{E-Mails verschlüsseln}
+\begin{frame}{E-Mails verschlüsseln}
   
-  $\rightarrow$ ÖS sind bereits ausgetauscht!
+  $\rightarrow$ ÖS müssen bereits ausgetauscht sein!
+
   \begin{center}
   \includegraphics[width=.9\textwidth]{img-src/pgp_enc.png}
   \end{center}
+
+  Testmail (mit Schlüssel im Anhang) an: \texttt{vertraulich@hejn.de}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=lk1]{E-Mails entschlüsseln}
+\begin{frame}{E-Mails entschlüsseln}
   \begin{center}
   \includegraphics[width=.9\textwidth]{img-src/pgp_dec.png}
   \end{center}
@@ -384,14 +388,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \begin{frame}[label=lk1]{Ausblick – Schutzziele bei PGP}
+ \begin{frame}{Ausblick – Schutzziele bei PGP}
   \begin{itemize}
    \item[$\square$\visible<2->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}] Vertraulichkeit \visible<2->{$\rightarrow$ Verschlüsselung}
    
    \item[$\square$\scalebox{1.25}{~}] Integrität (keine Veränderung) \visible<3->{$\rightarrow$ Signatur notwendig} 
    
    \item[$\square$\scalebox{1.25}{~}] Anonymität
+
+   \item[$\square$\visible<4->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}] Verfügbarkeit
   \end{itemize}
+  \pause
   \pause
   \pause
 
@@ -399,24 +406,57 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Ausblick – Signieren}
+\begin{frame}{Ausblick – Signieren 1}
   
   \begin{itemize}
    \item Prinzip: mit PS verschlüsselte Prüfsumme der Nachricht
    \item Überprüfen $=$ Entschlüsseln mit ÖS
    \item[$\Rightarrow$] Man muss dem öffentlichen Schlüssel vertrauen\\[2mm]
-   
+   \item[$\square$\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}] Integrität (keine Veränderung)
    \pause
    
    \item Schlüssel signieren bei persönlichem Treffen (Keysharing-Party) $\rightarrow$ "`Web of trust"'
-   \item Fingerabdruck-Bsp: {\tiny \texttt{214E 4E9D B193 6AF2 CFDC 68DF 13AD 3604 9D3E F6BF}}
+   \item Fingerabdruck-Bsp:\\
+   \texttt{214E 4E9D B193 6AF2 CFDC 68DF 13AD 3604 \textbf{9D3E F6BF}}
   \end{itemize}
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Ausblick – Signieren 2}
+  \begin{center}
+  \includegraphics[width=.9\textwidth]{img-src/pgp_sig.png}
+  \end{center}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[label=bg3a]{Ausblick – Nachteile PGP}
+\begin{frame}{Ausblick – Schlüssel pflegen}
+  \begin{itemize}
+  \item Ablaufdatum $\Rightarrow$ Verlängerung notwendig!
+  \begin{itemize}
+    \item[$\rightarrow$] ggf. neu auf Schlüsselserver hochladen!
+  \end{itemize}
+
+  \pause
+  \vspace*{\baselineskip}
+
+  \item Widerrufszertifikat sichern
+  \begin{itemize}
+    \item[$\rightarrow$] wir benötigt falls: 
+    \begin{itemize}
+      \item Passphrase vergessen
+      \item PS verloren ($\rightarrow$ Backup!)
+      \item Vertrauen in PS verloren
+    \end{itemize}
+  \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Ausblick – Nachteile PGP}
 Was wird verschlüsselt?
 \begin{itemize}
 \item Text
