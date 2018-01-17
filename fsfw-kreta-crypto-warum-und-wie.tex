@@ -42,7 +42,7 @@
       Joschka Heinrich${}^{1}$&
       Carsten Knoll${}^{2}$
     \end{tabularx}
-    
+
     \vspace*{2\baselineskip}
 
     \parbox{.95\columnwidth}{\centering\Large\inserttitle}
@@ -63,7 +63,7 @@
 \begin{frame}{FSFW – Freie Software und Freies Wissen}
 
   \begin{columns}
- 
+
 \column[t]{1\textwidth}
 \vspace{-5mm}
   \begin{itemize}
@@ -95,7 +95,7 @@
     \pause
     \item Für (Mitmachen-)Interessierte: \url{https://fsfw-dresden.de}
   \end{itemize}
-  
+
 \begin{textblock*}{5cm}[0.,0.](90mm,63mm)
 \only<4>{
   \includegraphics[width=35mm]{img-src/usb-hub}
@@ -103,7 +103,7 @@
 \only<5->{
   \includegraphics[width=35mm]{img-src/uni-stick-ausgabe-vortrag}
 }
-\end{textblock*}  
+\end{textblock*}
 
 \column[t]{.1\textwidth}
 ~
@@ -137,7 +137,7 @@
 
 \begin{frame}{Diskussion: "`Ich habe doch nichts zu verbergen"'}
   $\rightarrow$ 10 Minuten freie Diskussion
-  
+
   \begin{itemize}
    \item  je 2-5 Personen
    \item möglichst viele verschiedene Perspektiven einnehmen\\
@@ -163,14 +163,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{"`Ich habe doch nichts zu verbergen"'}
-  
+
   \begin{itemize}
    \item  In Menschheitsgeschichte:\\
    viele Beispiele für \textbf{rücksichtslosen Egoismus}
-   %\item Ausnutzung von Macht zu persönlichem Vorteil   
+   %\item Ausnutzung von Macht zu persönlichem Vorteil
    \item "`Wissen ist Macht"'
    \item[$\Rightarrow$] sensibler Umgang mit Informationen empfehlenswert\\[5mm]
-   
+
    \pause
 
    \item \textbf{Digitalisierung verstärkt das Problem}
@@ -182,7 +182,7 @@
     \item unbemerkt veränderbar (inkl. Metadaten, bspw. Absender)
    \end{itemize}
   \end{itemize}
-  
+
   ~\\[5mm]
   {\tiny $1$: E-Mail = nur Beispielmedium \qquad $2$: ggf. um die ganze Welt }
 
@@ -213,11 +213,11 @@
   \end{itemize}
 
 \end{frame}
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{PGP – Begriffe}
-  
+
   \begin{columns}
   \column[t]{.48\textwidth}
   \begin{itemize}
@@ -242,7 +242,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{PGP – Das Problem}
-  
+
   \begin{itemize}
    \item \textit{P1:} A möchte Nachricht an B vertraulich schicken\\
    \item[$\Rightarrow$] Nachricht verschlüsseln
@@ -256,15 +256,15 @@
    \begin{itemize}
     \item Es gibt: \textbf{ö}ffentlicher \textbf{S}chlüssel und \textbf{p}rivater \textbf{S}chlüssel
     %\item sehr große zufällige Zahlen (dargestellt als \href{https://cknoll.github.io/files/pub-key-carsten.txt}{Zeichen}\href{file:///home/ck/pub-key-carsten-demo.txt}{salat})
-   
+
     \pause
 
     \vspace*{.5\baselineskip}
 
     \item \textbf{ÖS}: zum Verschlüsseln\\
     {\vspace*{4mm}\hspace{12mm}\includegraphics[width=7mm]{img-src/padlock-lock}}
-   
-   
+
+
     \item \textbf{PS}: zum Entschlüsseln\\
     {\vspace*{4mm}\hspace{5mm}\includegraphics[width=14mm]{img-src/padlock-unlock-with-key}}
 
@@ -293,7 +293,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{PGP – Funktionsweise 2}
-  
+
     \begin{itemize}
    \item Öffentlicher Schlüssel ("`public key"')
    \begin{itemize}
@@ -301,7 +301,7 @@
     \item Sollten alle haben, von denen man verschlüsselte Mails empfangen möchte
     \item kann/sollte man weitergeben $\rightarrow$ auf Keyserver hochladen\\
     {\tiny Bsp: \url{http://pgp.mit.edu} \quad zu bedenken: nicht löschbar, nur widerrufbar $\Rightarrow$ Anonymität gefährdet}
-    
+
    \end{itemize}
    \pause
    \item Privater Schlüssel ("`private key"')
@@ -316,7 +316,7 @@
 
 
   \end{itemize}
-  
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -330,7 +330,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Praxisteil – Installation 1}
-  
+
   \begin{center}
   \includegraphics[width=.6\textwidth]{img-src/pgp_software.png}
   \end{center}
@@ -367,7 +367,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{E-Mails verschlüsseln}
-  
+
   $\rightarrow$ ÖS müssen bereits ausgetauscht sein!
 
   \begin{center}
@@ -391,9 +391,9 @@
  \begin{frame}{Ausblick – Schutzziele bei PGP}
   \begin{itemize}
    \item[$\square$\visible<2->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}] Vertraulichkeit \visible<2->{$\rightarrow$ Verschlüsselung}
-   
-   \item[$\square$\scalebox{1.25}{~}] Integrität (keine Veränderung) \visible<3->{$\rightarrow$ Signatur notwendig} 
-   
+
+   \item[$\square$\scalebox{1.25}{~}] Integrität (keine Veränderung) \visible<3->{$\rightarrow$ Signatur notwendig}
+
    \item[$\square$\scalebox{1.25}{~}] Anonymität
 
    \item[$\square$\visible<4->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}] Verfügbarkeit
@@ -407,14 +407,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Ausblick – Signieren 1}
-  
+
   \begin{itemize}
    \item Prinzip: mit PS verschlüsselte Prüfsumme der Nachricht
    \item Überprüfen $=$ Entschlüsseln mit ÖS
    \item[$\Rightarrow$] Man muss dem öffentlichen Schlüssel vertrauen\\[2mm]
    \item[$\square$\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}] Integrität (keine Veränderung)
    \pause
-   
+
    \item Schlüssel signieren bei persönlichem Treffen (Keysharing-Party) $\rightarrow$ "`Web of trust"'
    \item Fingerabdruck-Bsp:\\
    \texttt{214E 4E9D B193 6AF2 CFDC 68DF 13AD 3604 \textbf{9D3E F6BF}}
@@ -444,7 +444,7 @@
 
   \item Widerrufszertifikat sichern
   \begin{itemize}
-    \item[$\rightarrow$] wir benötigt falls: 
+    \item[$\rightarrow$] wir benötigt falls:
     \begin{itemize}
       \item Passphrase vergessen
       \item PS verloren ($\rightarrow$ Backup!)
@@ -475,7 +475,37 @@ Was wird nicht verschlüsselt?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Weitereführendes}
+\begin{frame}{Weitereführendes (1)}
+
+\begin{itemize}
+ \item Datenspuren (21. - 22. Okt.)\\[-6mm]
+\url{https://www.datenspuren.de}
+\hspace{12mm}\raisebox{-1mm}{\includegraphics[width=2cm]{img-src/datenspuren}}
+   \begin{itemize}
+   \item Öffentliches Symposium des \href{CCC Dresden}{http://c3d2.de/}
+   \item Vorträge, Info-Stände, Workshops u.v.m.
+
+   \end{itemize}
+   \item[]
+   \item Umundu-Festival (20. - 28. Okt.)
+   \begin{itemize}
+    \item Festival für nachhaltige Entwicklung
+    \item Fokus Thema 2017: Armut und Reichtum
+    \item Filme, Vorträge, Workshops, ...
+    \item \url{https://umundu.de/}
+   \end{itemize}
+\end{itemize}
+
+
+\begin{textblock*}{2cm}[0.,0.](90mm,53mm)
+\includegraphics[width=2cm]{img-src/umundu-postkarte}
+\end{textblock*}
+
+\end{frame}
+
+
+
+\begin{frame}{Weitereführendes (2)}
 
 \begin{itemize}
 \item[] \hspace{-2em} PGP-Verschlüsselung für Webmail
