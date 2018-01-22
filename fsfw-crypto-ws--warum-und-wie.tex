@@ -1,6 +1,6 @@
 \documentclass{beamer}
-%\includeonlyframes{uj}
 \synctex=1
+% \includeonlyframes{ct5}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
@@ -31,26 +31,23 @@
 \setbeamertemplate{footline}[frame number]
 
 \addtobeamertemplate{frametitle}{}{%
-  \begin{textblock*}{130mm}(.8\textwidth,8.4mm)
-    \includegraphics[width=4.25cm]{img-src/fsfw-logo.pdf}
+  \begin{textblock*}{130mm}(.963\textwidth,8.4mm)
+    \includegraphics[width=2.25cm]{img-src/fsfw-logo.pdf}
   \end{textblock*}
 }
 
 
-
 \title{Sichere Kommunikation: Warum \& Wie}
-\subtitle{KRETA – Oktober 2017}
+\subtitle{22. Januar 2018}
 
 \begin{document}
 
 \begin{frame}
   \begin{center}
-    \begin{tabularx}{7cm}{cc}
-      \includegraphics[width=2.5cm]{img-src/kreta-logo.png}&
-      \includegraphics[width=3cm]{img-src/fsfw-logo-with-text.pdf}\\
-      Joschka Heinrich${}^{1}$&
-      Carsten Knoll${}^{2}$
-    \end{tabularx}
+%     \begin{tabularx}{7cm}{cc}
+      \includegraphics[width=4cm]{img-src/fsfw-logo-with-text.pdf}\\
+      { \qquad Carsten Knoll${}^{1}$, Joschka Heinrich (HG KRETA, Folien)}
+%     \end{tabularx}
 
     \vspace*{2\baselineskip}
 
@@ -63,8 +60,14 @@
   \end{center}
 
   ~\\[5mm]
-  {\tiny $1$ joschka.heinrich@tu-dresden.de \qquad $2$ casten.knoll@posteo.de}
+  { \tiny   ${}^1$   casten.knoll@posteo.de}
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,7 +99,7 @@
     \item Linux-Install-Party, Linux-Presentation-Day
     \item Monatliche Sprechstunde zu \LaTeX{} u.a.
     \item Programmpapier
-    \item \textbf<4-5>{„Uni-Stick”:~80 $\times$ 8\,GB mit freier Software}
+    \item \textbf<4-5>{„Uni-Stick”:~100 $\times$ 8\,GB mit freier Software}
     \item Verschlüsselungsgewinnspiel
     \end{itemize}
     \pause
@@ -125,7 +128,7 @@
 
   \textbf{1) Verschlüsselung in der Theorie}
   \begin{itemize}
-   \item Diskussion: "`Ich habe doch nichts zu verbergen"'
+   \item Narrativ-Dekonstruktion: "`Ich habe doch nichts zu verbergen"'
    \item Schutzziele sicherer Kommunikation
    \item Funktionsweise PGP
   \end{itemize}
@@ -144,15 +147,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Diskussion: "`Ich habe doch nichts zu verbergen"'}
-  $\rightarrow$ 10 Minuten freie Diskussion
+\begin{frame}{Narrativ: "`Ich habe doch nichts zu verbergen"'}
+  
 
   \begin{itemize}
-   \item  je 2-5 Personen
-   \item möglichst viele verschiedene Perspektiven einnehmen\\
-  (Bürger*in, Bürgerrechtler*in, Innenminister*in, Freiheitskämpfer*in, …)
-   \item Argumente sammeln
-
+   \item Weit verbreitet und sehr wirkmächtig
+   
+   \item Sollte oft und fundiert widersprochen werden
    \pause
 
    \item Stichworte
@@ -160,6 +161,7 @@
      \item Kriminalität (Einbruch, Erpressung, …)
      \item Privatsphäre
      \item Selbstzensur (analog: Kamera-Attrappen)
+     \item Schutzwürdige Daten (Gesundheit, Geschäftsgeheimnisse)
      \item Demokratie
      \item Journalismus
      \item Whistleblowing
@@ -263,7 +265,7 @@
    \item\textit{P2:} Schlüsselverteilung\\
    \item[$\Rightarrow$] asymmetrisches Verschlüsselungsverfahren (\texttt{PGP})
    \begin{itemize}
-    \item Es gibt: \textbf{ö}ffentlicher \textbf{S}chlüssel und \textbf{p}rivater \textbf{S}chlüssel
+    \item Es gibt: \textbf{Ö}ffentlichen \textbf{S}chlüssel und \textbf{P}rivaten \textbf{S}chlüssel
     %\item sehr große zufällige Zahlen (dargestellt als \href{https://cknoll.github.io/files/pub-key-carsten.txt}{Zeichen}\href{file:///home/ck/pub-key-carsten-demo.txt}{salat})
 
     \pause
@@ -355,12 +357,16 @@
 \begin{frame}{Praxisteil – Installation 2}
   \begin{itemize}
   \item Anleitungen: \url{https://fsfw-dresden.de/gpg}
-  \item temporäre E-Mailadressen zum Test:
+  \bigskip
+  \item Bei Bedarf temporäre E-Mailadressen zum Test:
   \begin{itemize}
-    \item Adresse/User: \texttt{pgp-test-0$x$@hejn.de} ($x = 1 .. 5$)
-    \item Mailserver: \texttt{vega.uberspace.de}
+    \item Adresse: \texttt{tmp01@alnilam.uberspace.de} ... \texttt{tmp05@...}
+    \item Username: \texttt{plq-tmp01} ... \texttt{plq-tmp05}
+    \item Mailserver: \texttt{alnilam.uberspace.de}
     \item IMAP, Port: 993
-    \item Passwort: \texttt{fingerprint}
+    \item Passwort: \texttt{signatur}
+    \bigskip
+    \item werden heute Abend wieder gelöscht
   \end{itemize}
   \end{itemize}
 \end{frame}
@@ -375,15 +381,22 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{E-Mails verschlüsseln}
+\begin{frame}[label=ver1]{E-Mails verschlüsseln}
+\begin{itemize}
+ \item ÖS der Empfängerin muss bereits bekannt sein, z.B. via
+ \begin{itemize}
+  \item \href{https://pgp.mit.edu/}{Schlüsselserver}
+  \item \href{https://cknoll.github.io/files/pub-key-carsten.txt}{Direkte Veröffentlichung}
+  \\ {\tiny Enigmail $\rightarrow$ Key Management $\rightarrow$ Edit $\rightarrow$ Import from Clipboard}
+ \end{itemize}
+\end{itemize}
 
-  $\rightarrow$ ÖS müssen bereits ausgetauscht sein!
 
   \begin{center}
-  \includegraphics[width=.9\textwidth]{img-src/pgp_enc.png}
+  \includegraphics[width=.8\textwidth]{img-src/pgp_enc.png}
   \end{center}
 
-  Testmail (mit Schlüssel im Anhang) an: \texttt{vertraulich@hejn.de}
+  Testmail (mit Schlüssel im Anhang) an: {\footnotesize \texttt{carsten.knoll@posteo.de}}
 
 \end{frame}
 
@@ -391,7 +404,7 @@
 
 \begin{frame}{E-Mails entschlüsseln}
   \begin{center}
-  \includegraphics[width=.9\textwidth]{img-src/pgp_dec.png}
+  \includegraphics[width=.8\textwidth]{img-src/pgp_dec.png}
   \end{center}
 \end{frame}
 
@@ -401,13 +414,13 @@
   \begin{itemize}
    \item[$\square$\visible<2->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}] Vertraulichkeit \visible<2->{$\rightarrow$ Verschlüsselung}
 
-   \item[$\square$\scalebox{1.25}{~}] Integrität (keine Veränderung) \visible<3->{$\rightarrow$ Signatur notwendig}
+   \item[$\square$\scalebox{1.25}{~}] Integrität (keine Veränderung) \visible<3->{$\rightarrow$ \textbf{Signatur notwendig}}
 
    \item[$\square$\scalebox{1.25}{~}] Anonymität
 
-   \item[$\square$\visible<4->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}] Verfügbarkeit
+%    \item[$\square$\visible<4->{\hspace{-.67em}\raisebox{0.1em}{\scalebox{1.3}{\checkmark}}}] Verfügbarkeit
+   \item[$\square$\scalebox{1.25}{~}] Verfügbarkeit
   \end{itemize}
-  \pause
   \pause
   \pause
 
@@ -443,7 +456,7 @@
 
 \begin{frame}{Ausblick – Schlüssel pflegen}
   \begin{itemize}
-  \item Ablaufdatum $\Rightarrow$ Verlängerung notwendig!
+  \item Ablaufdatum? $\Rightarrow$ Verlängerung notwendig!
   \begin{itemize}
     \item[$\rightarrow$] ggf. neu auf Schlüsselserver hochladen!
   \end{itemize}
@@ -484,37 +497,8 @@ Was wird nicht verschlüsselt?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{Weitereführendes (1)}
 
-\begin{itemize}
- \item Datenspuren (21. - 22. Okt.)\\[-6mm]
-\url{https://www.datenspuren.de}
-\hspace{12mm}\raisebox{-1mm}{\includegraphics[width=2cm]{img-src/datenspuren}}
-   \begin{itemize}
-   \item Öffentliches Symposium des \href{CCC Dresden}{http://c3d2.de/}
-   \item Vorträge, Info-Stände, Workshops u.v.m.
-
-   \end{itemize}
-   \item[]
-   \item Umundu-Festival (20. - 28. Okt.)
-   \begin{itemize}
-    \item Festival für nachhaltige Entwicklung
-    \item Fokus Thema 2017: Armut und Reichtum
-    \item Filme, Vorträge, Workshops, ...
-    \item \url{https://umundu.de/}
-   \end{itemize}
-\end{itemize}
-
-
-\begin{textblock*}{2cm}[0.,0.](90mm,53mm)
-\includegraphics[width=2cm]{img-src/umundu-postkarte}
-\end{textblock*}
-
-\end{frame}
-
-
-
-\begin{frame}{Weitereführendes (2)}
+\begin{frame}{Weitereführendes}
 
 \begin{itemize}
 \item[] \hspace{-2em} PGP-Verschlüsselung für Webmail
@@ -531,6 +515,44 @@ Was wird nicht verschlüsselt?
   \item \href{https://www.ted.com/talks/glenn_greenwald_why_privacy_matters}{G. Greenwald: \textit{Why privacy matters}}
   \item \href{https://www.youtube.com/watch?v=XEVlyP4_11M}{J. Oliver + E. Snwoden (lustig)}
 \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[label=ct5]{\usebeamercolor[fg]{structure}\color{fg}{}}
+ \vspace{-10mm}
+
+
+\begin{columns}
+\column[t]{0.9\textwidth}
+
+\begin{flushright}
+\huge
+\url{https://fsfw-dresden.de}\\
+{\tiny Plenum: Do. (ungerade KW, SLUB)}\\[3mm]
+\end{flushright}
+\column[t]{0.1\textwidth}
+~
+\end{columns}
+
+ 
+  \begin{textblock*}{55mm}[0.,0.5](13mm,62.6mm)
+
+ \includegraphics[width=50mm]{img-src/fsfw-netzwerke}
+
+ \end{textblock*}
+ 
+ 
+   \begin{textblock*}{55mm}[0.,0.5](78mm,72mm)
+
+ \includegraphics[width=30mm]{img-src/mitmachen-qr}
+
+ \end{textblock*}
+
+
+% \end{center}
 \end{frame}
 
 \end{document}
