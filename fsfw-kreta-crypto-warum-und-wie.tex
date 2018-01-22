@@ -18,6 +18,7 @@
 
 % \usepackage{anyfontsize}
 
+
 \hypersetup{
   colorlinks=true,
   linkcolor=[rgb]{1, 1, 1}, %
@@ -28,6 +29,14 @@
 \usetheme{Dresden}
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}[frame number]
+
+\addtobeamertemplate{frametitle}{}{%
+  \begin{textblock*}{130mm}(.8\textwidth,8.4mm)
+    \includegraphics[width=4.25cm]{img-src/fsfw-logo.pdf}
+  \end{textblock*}
+}
+
+
 
 \title{Sichere Kommunikation: Warum \& Wie}
 \subtitle{KRETA – Oktober 2017}
